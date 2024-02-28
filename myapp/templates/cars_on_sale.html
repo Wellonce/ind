@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %} <title>cars on sale</title> {% endblock %}
+
+
+{% block body %}
+    <h2>Please, see the available car categories on sale below:</h2>
+    <ul>
+        <li><a href="{% url 'myapp:malibu-sale' %}">Malibu</a> <br><br></li>
+        <li><a href="{% url 'myapp:gentra-sale' %}">Gentra</a> <br><br></li>
+        <li><a href="{% url 'myapp:cobalt-sale' %}">Cobalt</a> <br><br></li>
+        <li><a href="{% url 'myapp:nexia-sale' %}">Nexia</a> <br><br></li>
+    </ul>
+
+{% endblock %}

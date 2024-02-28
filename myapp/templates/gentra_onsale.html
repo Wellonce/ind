@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %} Gentras on sale {% endblock %}
+
+{% block body %} 
+    <h2>Here are the available Gentra cars we have:</h2>
+    {% for gentra in gentras %}
+        {{ gentra.name }}, the year produced is: {{ gentra.year }}, the color is {{gentra.color}}, type of the gear is {{gentra.gear }}, 
+        the price is {{gentra.price}}$, <img src="{{ gentra.image.url }} " alt="gentra image" width="15%" height="20%"><br><br>
+
+
+    {% endfor %}    
+
+{% endblock %}

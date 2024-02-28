@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %} Malibu on sale {% endblock %}
+
+{% block body %} 
+    <h2>Here are the available malibu cars we have:</h2>
+    {% for malibu in malibus %}
+        {{ malibu.name }}, the year produced is: {{ malibu.year }}, the color is {{malibu.color}}, type of the gear is {{malibu.gear }}, 
+        the price is {{malibu.price}}$, <img src="{{malibu.image.url }}" width="15%" height="20%"> <br><br>
+
+
+    {% endfor %}
+
+{% endblock %}

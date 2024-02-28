@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    <title><h2>Home Page of Avtosalon</h2></title>
+{% endblock %}
+
+{% block body %}
+    <h2>Welcome to our Avtosalon!</h2>
+    <h3>If you would like to get info about cars, please, choose the car type that's interesting for you</h3>
+    <ul>
+        <li><a href="{% url 'myapp:malibu' %}">Malibu</a></li>
+        <li><a href="{% url 'myapp:gentra' %}">Gentra</a></li>
+        <li><a href="{% url 'myapp:cobalt' %}">Cobalt</a></li>
+        <li><a href="{% url 'myapp:nexia' %}">Nexia</a></li>
+    </ul>
+
+    <h3>Or if you would like to buy a car, please click <a href="{% url 'myapp:all-sale' %}">here</a></h3>
+
+    <a class = "col-5"  href="{% url 'myapp:login-page' %}">Login</a><br><br>
+    <a class = "col-6" href="{% url 'myapp:register-page' %}">Register</a>
+    
+{% endblock %}

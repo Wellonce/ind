@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %} Nexia on sale {% endblock %}
+
+{% block body %} 
+    <h2>Here are the available Nexia cars we have:</h2>
+    {% for nexia in nexias %}
+        {{ nexia.name }}, the year produced is: {{ nexia.year }}, the color is {{nexia.color}}, type of the gear is {{nexia.gear }}, 
+        the price is {{nexia.price}}$, <img src="{{nexia.image.url }}" width="15%" height="20%"> <br><br>
+
+
+    {% endfor %}
+
+{% endblock %}
